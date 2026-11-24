@@ -1,5 +1,121 @@
-<!doctype html><html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ruby-yama</title>
-<body style="font-family:sans-serif;background:#03050a;color:#dde;padding:24px">
-<h1>ruby-yama</h1><p>個人開発のゲーム</p>
-<ul><li><a style="color:#3df2ff" href="/oparts-dive/">OPARTS DIVE</a></li><li><a style="color:#3df2ff" href="/oparts-dive/fuwari/">ふわりの雑学パズル</a></li><li><a style="color:#3df2ff" href="/oparts-dive/ukiyo/">UKIYO STRINGS</a></li></ul>
-<p>お問い合わせ：ruby.yamamoto.ai@gmail.com</p></body></html>
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>rubygames｜ruby-yama のスマホゲーム</title>
+<meta name="description" content="ruby-yama がひとりで作っているスマホゲームのまとめ。ORANGE GEAR、OPARTS DIVE、サンドイッチ通り、UKIYO STRINGS、ふわりの雑学パズル、YOHAKU。グッズも SUZURI で。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="rubygames｜ruby-yama のスマホゲーム">
+<meta property="og:description" content="ひとりで作っているスマホゲームと、そのグッズのまとめ。">
+<meta property="og:image" content="https://ruby-yama.github.io/img/og.jpg">
+<meta property="og:url" content="https://ruby-yama.github.io/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07090f;--card:#0f1420;--line:rgba(255,255,255,.08);--tx:#e8ecf3;--mut:#8b96a8;--or:#ff7a1a}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:'Zen Kaku Gothic New',system-ui,sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.w{max-width:1120px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:5;background:rgba(7,9,15,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+header .w{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{display:flex;align-items:center;gap:10px;font:700 18px Inter;letter-spacing:.04em}
+.brand img{width:30px;height:30px;border-radius:8px}
+.brand i{color:var(--or);font-style:normal;margin-left:-.3em}
+nav a{margin-left:22px;font:500 13px Inter;letter-spacing:.14em;color:var(--mut)}
+nav a:hover{color:var(--tx)}
+.hero{padding:96px 20px 64px;text-align:center}
+.eyebrow{font:500 12px Inter;letter-spacing:.42em;color:var(--or)}
+.hero h1{margin:18px 0 12px;font-size:clamp(30px,5.2vw,52px);font-weight:700;line-height:1.3}
+.hero p{margin:0 auto;max-width:560px;color:var(--mut)}
+.icons{display:flex;justify-content:center;gap:12px;margin-top:36px;flex-wrap:wrap}
+.icons img{width:58px;height:58px;border-radius:14px;box-shadow:0 6px 20px rgba(0,0,0,.5)}
+section{padding:56px 0}
+.sh{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:24px;border-bottom:1px solid var(--line);padding-bottom:12px}
+.sh h2{margin:0;font:300 26px Inter;letter-spacing:.28em}
+.sh span{color:var(--mut);font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
+.g{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,border-color .2s}
+.g:hover{transform:translateY(-3px);border-color:rgba(255,255,255,.18)}
+.g .sc{aspect-ratio:16/10;background:#000 center/cover no-repeat}
+.g .b{padding:16px 18px 18px;display:flex;flex-direction:column;gap:8px;flex:1}
+.g .top{display:flex;align-items:center;gap:12px}
+.g .top img{width:48px;height:48px;border-radius:12px}
+.g h3{margin:0;font-size:17px;line-height:1.35}
+.g .tag{font:500 11px Inter;letter-spacing:.18em;color:var(--mut)}
+.g p{margin:0;color:#c3cad6;font-size:14px;flex:1}
+.g .bt{display:flex;gap:8px;margin-top:6px}
+.btn{display:inline-flex;align-items:center;justify-content:center;height:38px;padding:0 16px;border-radius:999px;font:500 13px Inter;letter-spacing:.04em}
+.btn.p{background:#fff;color:#07090f}
+.btn.s{border:1px solid var(--line);color:var(--mut)}
+.btn.s:hover{color:var(--tx);border-color:rgba(255,255,255,.3)}
+.goods{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px}
+.gd{background:#fff;border-radius:16px;overflow:hidden;color:#1a1d24}
+.gd img{width:100%;aspect-ratio:1;object-fit:cover;display:block}
+.gd div{padding:10px 12px 14px;font-size:13px;line-height:1.5}
+.cta{text-align:center;margin-top:26px}
+.cta .btn{height:46px;padding:0 28px;font-size:14px}
+footer{border-top:1px solid var(--line);padding:36px 0 56px;color:var(--mut);font-size:13px}
+footer .w{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+@media (max-width:560px){nav a{margin-left:12px;letter-spacing:.04em;font-size:12px}.brand{font-size:16px}.hero{padding:64px 20px 40px}}
+</style>
+</head>
+<body>
+<header><div class="w">
+  <a class="brand" href="#"><img src="img/logo.png" alt="">ruby<i>games</i></a>
+  <nav><a href="#games">GAMES</a><a href="#goods">GOODS</a><a href="#contact">CONTACT</a></nav>
+</div></header>
+
+<div class="hero w">
+  <div class="eyebrow">INDIE MOBILE GAMES</div>
+  <h1>ひとりで作っている、<br>スマホゲームのお店。</h1>
+  <p>ruby-yama が企画から絵・音までひとりで作っているゲームです。どれも App Store で無料で遊べます。</p>
+  <div class="icons" id="icons"></div>
+</div>
+
+<section id="games"><div class="w">
+  <div class="sh"><h2>GAMES</h2><span>App Store で配信中</span></div>
+  <div class="grid" id="grid"></div>
+</div></section>
+
+<section id="goods"><div class="w">
+  <div class="sh"><h2>GOODS</h2><span>SUZURI で販売中</span></div>
+  <div class="goods">
+    <a class="gd" href="https://suzuri.jp/zatugaku_Ruby/21478196/acrylic-keychain/50x50mm/clear" target="_blank" rel="noopener"><img src="img/goods_blade.jpg" alt=""><div>ORANGE GEAR 部品「ブレード」<br>アクリルキーホルダー</div></a>
+    <a class="gd" href="https://suzuri.jp/zatugaku_Ruby/21478210/acrylic-stand/50mm/clear" target="_blank" rel="noopener"><img src="img/goods_mika.jpg" alt=""><div>ORANGE GEAR ミカ<br>アクリルスタンド</div></a>
+    <a class="gd" href="https://suzuri.jp/zatugaku_Ruby/21478277/t-shirt/m/black" target="_blank" rel="noopener"><img src="img/goods_tee.jpg" alt=""><div>OPARTS DIVE ルナフレア<br>Tシャツ</div></a>
+    <a class="gd" href="https://suzuri.jp/zatugaku_Ruby/21478223/acrylic-keychain/50x50mm/clear" target="_blank" rel="noopener"><img src="img/goods_egg.jpg" alt=""><div>サンドイッチ通り たまごサンド<br>アクリルキーホルダー</div></a>
+  </div>
+  <div class="cta"><a class="btn p" href="https://suzuri.jp/zatugaku_Ruby" target="_blank" rel="noopener">SUZURI のお店をみる</a></div>
+</div></section>
+
+<footer id="contact"><div class="w">
+  <div>お問い合わせ：ruby.yamamoto.ai@gmail.com</div>
+  <div>© rubygames / ruby-yama</div>
+</div></footer>
+
+<script>
+const G=[
+ {id:'6834894960',n:'ORANGE GEAR ― OPARTS ZERO',t:'STRATEGY RPG',d:'指でつまんで動かし、味方ふたりで敵を「はさむ」。体のマスに部品を組んで戦うバトルRPG。',s:'oparts-dive/gear/'},
+ {id:'6824476093',n:'OPARTS DIVE',t:'ROGUELITE',d:'古代遺跡に眠るオーパーツを求めて、ロボットで地下へ潜るローグライト。部品の並べ方で強さが変わる。',s:'oparts-dive/'},
+ {id:'6832594465',n:'サンドイッチ通り',t:'SIMULATION',d:'パンに具を重ねて、自分だけのサンドを作る。重ねる順番で味が変わる、お店そだてのゲーム。',s:'oparts-dive/sandwich/'},
+ {id:'6831505200',n:'YOHAKU ヨハク',t:'PUZZLE BATTLE',d:'古い図書館の本からあふれたインクの怪物を、パネルをそろえて消していく。',s:'oparts-dive/yohaku/'},
+ {id:'6824533269',n:'UKIYO STRINGS',t:'RHYTHM',d:'狐面の少女と、三味線の3本の弦を弾く。和とサイバーのリズムゲーム。',s:'oparts-dive/ukiyo/'},
+ {id:'6824510114',n:'ふわりの雑学パズル',t:'PUZZLE',d:'雑学が好きな人のための、やさしい3つそろえパズル。解くたびに雑学がひとつ増える。',s:'oparts-dive/fuwari/'},
+ {id:'6825566599',n:'ストレージおそうじ',t:'UTILITY',d:'写真と動画を整理して、iPhone の「ストレージがいっぱい」を解決。すべての機能が無料。',s:'oparts-dive/storage/'}
+];
+const st=id=>'https://apps.apple.com/jp/app/id'+id;
+document.getElementById('icons').innerHTML=G.map(g=>`<a href="${st(g.id)}" target="_blank" rel="noopener" title="${g.n}"><img src="img/icon_${g.id}.jpg" alt="${g.n}"></a>`).join('');
+document.getElementById('grid').innerHTML=G.map(g=>`<div class="g">
+ <a class="sc" href="${st(g.id)}" target="_blank" rel="noopener" style="background-image:url(img/shot_${g.id}.jpg)"></a>
+ <div class="b"><div class="top"><img src="img/icon_${g.id}.jpg" alt=""><div><div class="tag">${g.t}</div><h3>${g.n}</h3></div></div>
+ <p>${g.d}</p>
+ <div class="bt"><a class="btn p" href="${st(g.id)}" target="_blank" rel="noopener">App Store</a><a class="btn s" href="/${g.s}">サポート</a></div></div></div>`).join('');
+</script>
+</body>
+</html>
