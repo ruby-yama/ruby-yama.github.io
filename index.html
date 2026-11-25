@@ -62,13 +62,23 @@ section{padding:56px 0}
 .cta .btn{height:46px;padding:0 28px;font-size:14px}
 footer{border-top:1px solid var(--line);padding:36px 0 56px;color:var(--mut);font-size:13px}
 footer .w{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
-@media (max-width:560px){nav a{margin-left:12px;letter-spacing:.04em;font-size:12px}.brand{font-size:16px}.hero{padding:64px 20px 40px}}
+.nav-shop{margin-left:22px;padding:7px 14px;border-radius:999px;background:var(--or);color:#07090f!important;font:700 12px Inter;letter-spacing:.14em}
+.hbt{display:flex;justify-content:center;gap:12px;margin-top:30px;flex-wrap:wrap}
+.btn.o{background:var(--or);color:#07090f;font-weight:700}
+.btn.big{height:48px;padding:0 26px;font-size:14px}
+.shop{border:1px solid rgba(255,122,26,.45);border-radius:22px;padding:26px;background:linear-gradient(135deg,rgba(255,122,26,.13),rgba(255,122,26,.02) 55%),var(--card)}
+.shop .hd{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:20px}
+.shop .hd h2{margin:6px 0 4px;font-size:clamp(22px,3.4vw,30px)}
+.shop .hd p{margin:0;color:var(--mut);font-size:14px}
+.btn.g2{border:1px solid rgba(255,122,26,.6);color:var(--or)}
+.fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:6;display:flex;align-items:center;gap:8px;height:46px;padding:0 18px;border-radius:999px;background:var(--or);color:#07090f;font:700 13px Inter;letter-spacing:.1em;box-shadow:0 10px 28px rgba(0,0,0,.55)}
+@media (max-width:560px){.nav-shop{margin-left:10px;padding:6px 10px}.shop{padding:18px}.goods{grid-template-columns:1fr 1fr;gap:10px}.gd div{font-size:11px;padding:8px 9px 10px}nav a.nc{display:none}nav a{margin-left:12px;letter-spacing:.04em;font-size:12px}.brand{font-size:16px}.hero{padding:64px 20px 40px}}
 </style>
 </head>
 <body>
 <header><div class="w">
   <a class="brand" href="#"><img src="img/logo.png" alt="">ruby<i>games</i></a>
-  <nav><a href="#games">GAMES</a><a href="#goods">GOODS</a><a href="request/">WORK</a><a href="#contact">CONTACT</a></nav>
+  <nav><a class="nc" href="#games">GAMES</a><a href="request/">WORK</a><a class="nc" href="#contact">CONTACT</a><a class="nav-shop" href="#goods">SHOP</a></nav>
 </div></header>
 
 <div class="hero w">
@@ -76,34 +86,37 @@ footer .w{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
   <h1>遊べるゲームと、<br>そのグッズ。</h1>
   <p>ruby-yama のスマホゲームです。どれも App Store で無料で遊べます。グッズは SUZURI で。</p>
   <div class="icons" id="icons"></div>
+  <div class="hbt"><a class="btn p big" href="#games">ゲームを見る</a><a class="btn o big" href="https://suzuri.jp/zatugaku_Ruby" target="_blank" rel="noopener">グッズを買う（SUZURI）</a></div>
 </div>
 
-<section id="games"><div class="w">
-  <div class="sh"><h2>GAMES</h2><span>App Store で配信中</span></div>
-  <div class="grid" id="grid"></div>
-</div></section>
-
 <section id="goods"><div class="w">
-  <div class="sh"><h2>GOODS</h2><span>SUZURI で販売中</span></div>
+  <div class="shop"><div class="hd"><div><div class="eyebrow">OFFICIAL GOODS SHOP</div><h2>ゲームのグッズ、売ってます。</h2><p>キャラのアクリルスタンド、部品アイコンのキーホルダー、Tシャツなど。SUZURI で1個から注文できます。</p></div><a class="btn o big" href="https://suzuri.jp/zatugaku_Ruby" target="_blank" rel="noopener">SUZURI のお店へ →</a></div>
   <div class="goods">
     <a class="gd" href="https://suzuri.jp/zatugaku_Ruby/21478196/acrylic-keychain/50x50mm/clear" target="_blank" rel="noopener"><img src="img/goods_blade.jpg" alt=""><div>ORANGE GEAR 部品「ブレード」<br>アクリルキーホルダー</div></a>
     <a class="gd" href="https://suzuri.jp/zatugaku_Ruby/21478210/acrylic-stand/50mm/clear" target="_blank" rel="noopener"><img src="img/goods_mika.jpg" alt=""><div>ORANGE GEAR ミカ<br>アクリルスタンド</div></a>
     <a class="gd" href="https://suzuri.jp/zatugaku_Ruby/21478277/t-shirt/m/black" target="_blank" rel="noopener"><img src="img/goods_tee.jpg" alt=""><div>OPARTS DIVE ルナフレア<br>Tシャツ</div></a>
     <a class="gd" href="https://suzuri.jp/zatugaku_Ruby/21478223/acrylic-keychain/50x50mm/clear" target="_blank" rel="noopener"><img src="img/goods_egg.jpg" alt=""><div>サンドイッチ通り たまごサンド<br>アクリルキーホルダー</div></a>
   </div>
-  <div class="cta"><a class="btn p" href="https://suzuri.jp/zatugaku_Ruby" target="_blank" rel="noopener">SUZURI のお店をみる</a></div>
+  <div class="cta"><a class="btn o big" href="https://suzuri.jp/zatugaku_Ruby" target="_blank" rel="noopener">ほかのグッズも見る</a></div></div>
 </div></section>
+
+<section id="games"><div class="w">
+  <div class="sh"><h2>GAMES</h2><span>App Store で配信中</span></div>
+  <div class="grid" id="grid"></div>
+</div></section>
+
 
 <footer id="contact"><div class="w">
   <div>お問い合わせ：ruby.yamamoto.ai@gmail.com　／　<a href="request/" style="color:#ff7a1a">お仕事のご依頼はこちら</a></div>
   <div>© rubygames / ruby-yama</div>
 </div></footer>
 
+<a class="fab" href="https://suzuri.jp/zatugaku_Ruby" target="_blank" rel="noopener">SHOP</a>
 <script>
 const G=[
- {id:'6834894960',n:'ORANGE GEAR ― OPARTS ZERO',t:'STRATEGY RPG',d:'指でつまんで動かし、味方ふたりで敵を「はさむ」。体のマスに部品を組んで戦うバトルRPG。',s:'oparts-dive/gear/'},
- {id:'6824476093',n:'OPARTS DIVE',t:'ROGUELITE',d:'古代遺跡に眠るオーパーツを求めて、ロボットで地下へ潜るローグライト。部品の並べ方で強さが変わる。',s:'oparts-dive/'},
- {id:'6832594465',n:'サンドイッチ通り',t:'SIMULATION',d:'パンに具を重ねて、自分だけのサンドを作る。重ねる順番で味が変わる、お店そだてのゲーム。',s:'oparts-dive/sandwich/'},
+ {id:'6834894960',n:'ORANGE GEAR ― OPARTS ZERO',t:'STRATEGY RPG',d:'指でつまんで動かし、味方ふたりで敵を「はさむ」。体のマスに部品を組んで戦うバトルRPG。',s:'oparts-dive/gear/',gd:1},
+ {id:'6824476093',n:'OPARTS DIVE',t:'ROGUELITE',d:'古代遺跡に眠るオーパーツを求めて、ロボットで地下へ潜るローグライト。部品の並べ方で強さが変わる。',s:'oparts-dive/',gd:1},
+ {id:'6832594465',n:'サンドイッチ通り',t:'SIMULATION',d:'パンに具を重ねて、自分だけのサンドを作る。重ねる順番で味が変わる、お店そだてのゲーム。',s:'oparts-dive/sandwich/',gd:1},
  {id:'6831505200',n:'YOHAKU ヨハク',t:'PUZZLE BATTLE',d:'古い図書館の本からあふれたインクの怪物を、パネルをそろえて消していく。',s:'oparts-dive/yohaku/'},
  {id:'6824533269',n:'UKIYO STRINGS',t:'RHYTHM',d:'狐面の少女と、三味線の3本の弦を弾く。和とサイバーのリズムゲーム。',s:'oparts-dive/ukiyo/'},
  {id:'6824510114',n:'ふわりの雑学パズル',t:'PUZZLE',d:'雑学が好きな人のための、やさしい3つそろえパズル。解くたびに雑学がひとつ増える。',s:'oparts-dive/fuwari/'},
@@ -115,7 +128,7 @@ document.getElementById('grid').innerHTML=G.map(g=>`<div class="g">
  <a class="sc" href="${st(g.id)}" target="_blank" rel="noopener" style="background-image:url(img/shot_${g.id}.jpg)"></a>
  <div class="b"><div class="top"><img src="img/icon_${g.id}.jpg" alt=""><div><div class="tag">${g.t}</div><h3>${g.n}</h3></div></div>
  <p>${g.d}</p>
- <div class="bt"><a class="btn p" href="${st(g.id)}" target="_blank" rel="noopener">App Store</a><a class="btn s" href="/${g.s}">サポート</a></div></div></div>`).join('');
+ <div class="bt"><a class="btn p" href="${st(g.id)}" target="_blank" rel="noopener">App Store</a>${g.gd?`<a class="btn g2" href="https://suzuri.jp/zatugaku_Ruby" target="_blank" rel="noopener">グッズ</a>`:''}<a class="btn s" href="/${g.s}">サポート</a></div></div></div>`).join('');
 </script>
 </body>
 </html>
