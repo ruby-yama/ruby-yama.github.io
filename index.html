@@ -42,13 +42,14 @@ nav a:hover{color:var(--tx)}
 .nav-shop{margin-left:22px;padding:8px 15px;border-radius:999px;background:var(--or);color:#07090f!important;font:700 12px Inter;letter-spacing:.14em;box-shadow:0 0 0 0 rgba(255,122,26,.6);animation:pulse 2.6s infinite}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,122,26,.55)}70%{box-shadow:0 0 0 12px rgba(255,122,26,0)}100%{box-shadow:0 0 0 0 rgba(255,122,26,0)}}
 /* ヒーロー */
+.w.wide{max-width:1400px}
 .hero{position:relative;min-height:calc(100svh - 62px);display:grid;grid-template-columns:1.05fr 1fr;align-items:center;gap:40px;padding-top:40px;padding-bottom:40px}
 .eyebrow{display:inline-flex;align-items:center;gap:10px;font:500 12px Inter;letter-spacing:.42em;color:var(--or)}
 .eyebrow::before{content:"";width:26px;height:1px;background:var(--or)}
 .hero h1{margin:20px 0 18px;font-weight:900;font-size:clamp(38px,6.2vw,76px);line-height:1.12;letter-spacing:-.01em}
 .hero h1 .gr{background:linear-gradient(100deg,#fff 0%,var(--or2) 30%,var(--or) 50%,#fff 70%,#fff 100%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 6s linear infinite}
 @keyframes shine{from{background-position:100% 0}to{background-position:-150% 0}}
-.hero h1 .ln{display:block;overflow:hidden}
+.hero h1 .ln{display:block;overflow:hidden;white-space:nowrap}
 .hero h1 .ln>span{display:inline-block;transform:translateY(105%);animation:up .9s cubic-bezier(.2,.8,.2,1) forwards}
 .hero h1 .ln:nth-child(2)>span{animation-delay:.12s}
 @keyframes up{to{transform:none}}
@@ -78,11 +79,11 @@ nav a:hover{color:var(--tx)}
 .stats b{display:block;font:900 26px Inter;color:var(--tx);letter-spacing:0}
 .stats b em{font-style:normal;color:var(--or)}
 /* 流れる画面の壁 */
-.wall{position:relative;height:min(78svh,700px);perspective:1400px}
+.wall{position:relative;height:min(84svh,860px);perspective:1400px;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
 .wall .tilt{position:absolute;inset:-6% -10%;display:flex;gap:16px;justify-content:center;transform:rotateX(18deg) rotateY(-18deg) rotateZ(8deg);transform-style:preserve-3d}
-.wall .col{display:flex;flex-direction:column;gap:16px;width:150px;flex:none;animation:scrollY 38s linear infinite}
-.wall .col.r{animation-direction:reverse;animation-duration:46s}
-.wall .col:nth-child(3){animation-duration:42s}
+.wall .col{display:flex;flex-direction:column;gap:18px;width:clamp(150px,11vw,200px);flex:none;animation:scrollY 26s linear infinite}
+.wall .col.r{animation-direction:reverse;animation-duration:32s}
+.wall .col:nth-child(3){animation-duration:29s}
 .wall img{width:100%;aspect-ratio:300/650;border-radius:20px;border:1px solid rgba(255,255,255,.12);box-shadow:0 20px 40px rgba(0,0,0,.6);display:block;object-fit:cover;background:#111}
 @keyframes scrollY{from{transform:translateY(0)}to{transform:translateY(-50%)}}
 .wall .mask{position:absolute;inset:0;overflow:hidden;-webkit-mask-image:radial-gradient(ellipse 50% 50% at 50% 50%,#000 45%,transparent 100%);mask-image:radial-gradient(ellipse 50% 50% at 50% 50%,#000 45%,transparent 100%)}
@@ -195,7 +196,7 @@ footer .w{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
   <nav><a class="nc" href="#games">GAMES</a><a href="request/">WORK</a><a class="nc" href="#contact">CONTACT</a><a class="nav-shop" href="#goods">SHOP</a></nav>
 </div></header>
 
-<div class="hero w">
+<div class="hero w wide">
   <div class="txt">
     <div class="eyebrow">INDIE MOBILE GAMES</div>
     <h1><span class="ln"><span class="gr">遊べるゲームと、</span></span><span class="ln"><span>そのグッズ。</span></span></h1>
@@ -279,6 +280,8 @@ if(!RM&&matchMedia('(hover:hover) and (pointer:fine)').matches){
   c.addEventListener('pointerleave',()=>{c.style.transform=''});
  });
 }
+// 画面の壁がマウスについて少し動く
+if(!RM&&matchMedia('(hover:hover) and (pointer:fine)').matches){const wl=document.querySelector('.wall');addEventListener('pointermove',e=>{const x=e.clientX/innerWidth-.5,y=e.clientY/innerHeight-.5;wl.style.transform=`translate(${x*-24}px,${y*-18}px) rotateY(${x*6}deg) rotateX(${y*-4}deg)`},{passive:true})}
 // 読んだ量のバー
 const bar=$('bar');addEventListener('scroll',()=>{const h=document.documentElement;bar.style.transform=`scaleX(${h.scrollTop/(h.scrollHeight-h.clientHeight)||0})`},{passive:true});
 </script>
