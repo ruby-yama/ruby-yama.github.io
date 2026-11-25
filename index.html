@@ -5,11 +5,12 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>rubygames｜ruby-yama のスマホゲーム</title>
 <meta name="description" content="ruby-yama のスマホゲームのまとめ。ORANGE GEAR、OPARTS DIVE、サンドイッチ通り、UKIYO STRINGS、ふわりの雑学パズル、YOHAKU。グッズも SUZURI で。">
+<link rel="canonical" href="https://rubygames.net/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="rubygames｜ruby-yama のスマホゲーム">
 <meta property="og:description" content="ruby-yama のスマホゲームと、そのグッズのまとめ。">
-<meta property="og:image" content="https://ruby-yama.github.io/img/og.jpg">
-<meta property="og:url" content="https://ruby-yama.github.io/">
+<meta property="og:image" content="https://rubygames.net/img/og.jpg">
+<meta property="og:url" content="https://rubygames.net/">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="img/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -61,6 +62,7 @@ section{padding:56px 0}
 .cta{text-align:center;margin-top:26px}
 .cta .btn{height:46px;padding:0 28px;font-size:14px}
 footer{border-top:1px solid var(--line);padding:36px 0 56px;color:var(--mut);font-size:13px}
+footer #glist{width:100%;line-height:2}footer #glist a:hover{color:var(--tx)}
 footer .w{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 .nav-shop{margin-left:22px;padding:7px 14px;border-radius:999px;background:var(--or);color:#07090f!important;font:700 12px Inter;letter-spacing:.14em}
 .hbt{display:flex;justify-content:center;gap:12px;margin-top:30px;flex-wrap:wrap}
@@ -107,6 +109,7 @@ footer .w{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 
 
 <footer id="contact"><div class="w">
+  <div id="glist"><a href="/games/orange-gear/">ORANGE GEAR ― OPARTS ZERO</a>　<a href="/games/oparts-dive/">OPARTS DIVE</a>　<a href="/games/sandwich-street/">サンドイッチ通り</a>　<a href="/games/yohaku/">YOHAKU ヨハク</a>　<a href="/games/ukiyo-strings/">UKIYO STRINGS</a>　<a href="/games/fuwari-puzzle/">ふわりの雑学パズル</a>　<a href="/games/storage-osouji/">ストレージおそうじ</a></div>
   <div>お問い合わせ：ruby.yamamoto.ai@gmail.com　／　<a href="request/" style="color:#ff7a1a">お仕事のご依頼はこちら</a></div>
   <div>© rubygames / ruby-yama</div>
 </div></footer>
@@ -114,21 +117,21 @@ footer .w{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 <a class="fab" href="https://suzuri.jp/zatugaku_Ruby" target="_blank" rel="noopener">SHOP</a>
 <script>
 const G=[
- {id:'6834894960',n:'ORANGE GEAR ― OPARTS ZERO',t:'STRATEGY RPG',d:'指でつまんで動かし、味方ふたりで敵を「はさむ」。体のマスに部品を組んで戦うバトルRPG。',s:'oparts-dive/gear/',gd:1},
- {id:'6824476093',n:'OPARTS DIVE',t:'ROGUELITE',d:'古代遺跡に眠るオーパーツを求めて、ロボットで地下へ潜るローグライト。部品の並べ方で強さが変わる。',s:'oparts-dive/',gd:1},
- {id:'6832594465',n:'サンドイッチ通り',t:'SIMULATION',d:'パンに具を重ねて、自分だけのサンドを作る。重ねる順番で味が変わる、お店そだてのゲーム。',s:'oparts-dive/sandwich/',gd:1},
- {id:'6831505200',n:'YOHAKU ヨハク',t:'PUZZLE BATTLE',d:'古い図書館の本からあふれたインクの怪物を、パネルをそろえて消していく。',s:'oparts-dive/yohaku/'},
- {id:'6824533269',n:'UKIYO STRINGS',t:'RHYTHM',d:'狐面の少女と、三味線の3本の弦を弾く。和とサイバーのリズムゲーム。',s:'oparts-dive/ukiyo/'},
- {id:'6824510114',n:'ふわりの雑学パズル',t:'PUZZLE',d:'雑学が好きな人のための、やさしい3つそろえパズル。解くたびに雑学がひとつ増える。',s:'oparts-dive/fuwari/'},
- {id:'6825566599',n:'ストレージおそうじ',t:'UTILITY',d:'写真と動画を整理して、iPhone の「ストレージがいっぱい」を解決。すべての機能が無料。',s:'oparts-dive/storage/'}
+ {id:'6834894960',sl:'orange-gear',n:'ORANGE GEAR ― OPARTS ZERO',t:'STRATEGY RPG',d:'指でつまんで動かし、味方ふたりで敵を「はさむ」。体のマスに部品を組んで戦うバトルRPG。',s:'oparts-dive/gear/',gd:1},
+ {id:'6824476093',sl:'oparts-dive',n:'OPARTS DIVE',t:'ROGUELITE',d:'古代遺跡に眠るオーパーツを求めて、ロボットで地下へ潜るローグライト。部品の並べ方で強さが変わる。',s:'oparts-dive/',gd:1},
+ {id:'6832594465',sl:'sandwich-street',n:'サンドイッチ通り',t:'SIMULATION',d:'パンに具を重ねて、自分だけのサンドを作る。重ねる順番で味が変わる、お店そだてのゲーム。',s:'oparts-dive/sandwich/',gd:1},
+ {id:'6831505200',sl:'yohaku',n:'YOHAKU ヨハク',t:'PUZZLE BATTLE',d:'古い図書館の本からあふれたインクの怪物を、パネルをそろえて消していく。',s:'oparts-dive/yohaku/'},
+ {id:'6824533269',sl:'ukiyo-strings',n:'UKIYO STRINGS',t:'RHYTHM',d:'狐面の少女と、三味線の3本の弦を弾く。和とサイバーのリズムゲーム。',s:'oparts-dive/ukiyo/'},
+ {id:'6824510114',sl:'fuwari-puzzle',n:'ふわりの雑学パズル',t:'PUZZLE',d:'雑学が好きな人のための、やさしい3つそろえパズル。解くたびに雑学がひとつ増える。',s:'oparts-dive/fuwari/'},
+ {id:'6825566599',sl:'storage-osouji',n:'ストレージおそうじ',t:'UTILITY',d:'写真と動画を整理して、iPhone の「ストレージがいっぱい」を解決。すべての機能が無料。',s:'oparts-dive/storage/'}
 ];
 const st=id=>'https://apps.apple.com/jp/app/id'+id;
 document.getElementById('icons').innerHTML=G.map(g=>`<a href="${st(g.id)}" target="_blank" rel="noopener" title="${g.n}"><img src="img/icon_${g.id}.jpg" alt="${g.n}"></a>`).join('');
 document.getElementById('grid').innerHTML=G.map(g=>`<div class="g">
- <a class="sc" href="${st(g.id)}" target="_blank" rel="noopener" style="background-image:url(img/shot_${g.id}.jpg)"></a>
- <div class="b"><div class="top"><img src="img/icon_${g.id}.jpg" alt=""><div><div class="tag">${g.t}</div><h3>${g.n}</h3></div></div>
+ <a class="sc" href="/games/${g.sl}/" style="background-image:url(img/shot_${g.id}.jpg)"></a>
+ <div class="b"><div class="top"><img src="img/icon_${g.id}.jpg" alt=""><div><div class="tag">${g.t}</div><h3><a href="/games/${g.sl}/">${g.n}</a></h3></div></div>
  <p>${g.d}</p>
- <div class="bt"><a class="btn p" href="${st(g.id)}" target="_blank" rel="noopener">App Store</a>${g.gd?`<a class="btn g2" href="https://suzuri.jp/zatugaku_Ruby" target="_blank" rel="noopener">グッズ</a>`:''}<a class="btn s" href="/${g.s}">サポート</a></div></div></div>`).join('');
+ <div class="bt"><a class="btn p" href="${st(g.id)}" target="_blank" rel="noopener">App Store</a><a class="btn s" href="/games/${g.sl}/">くわしく</a>${g.gd?`<a class="btn g2" href="https://suzuri.jp/zatugaku_Ruby" target="_blank" rel="noopener">グッズ</a>`:''}</div></div></div>`).join('');
 </script>
 </body>
 </html>

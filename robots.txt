@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://rubygames.net/sitemap.xml
