@@ -242,13 +242,14 @@ footer .w{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 const G=[
  {id:'6834894960',sl:'orange-gear',n:'ORANGE GEAR ― OPARTS ZERO',t:'STRATEGY RPG',d:'指でつまんで動かし、味方ふたりで敵を「はさむ」。体のマスに部品を組んで戦うバトルRPG。',gd:1,r:[4,5]},
  {id:'6824476093',sl:'oparts-dive',n:'OPARTS DIVE',t:'ROGUELITE',d:'古代遺跡に眠るオーパーツを求めて、ロボットで地下へ潜るローグライト。部品の並べ方で強さが変わる。',gd:1,r:[4.7,87]},
+ {id:'6838352120',sl:'shipcraft',n:'船組みハクスラ 大航海',t:'HACK & SLASH',d:'船のマスに大砲や帆を組み、海賊を沈めて部品を奪う。交易もカスタマイズも全部入りの、大航海ハクスラ。',soon:1},
  {id:'6832594465',sl:'sandwich-street',n:'サンドイッチ通り',t:'SIMULATION',d:'パンに具を重ねて、自分だけのサンドを作る。重ねる順番で味が変わる、お店そだてのゲーム。',gd:1},
  {id:'6831505200',sl:'yohaku',n:'YOHAKU ヨハク',t:'PUZZLE BATTLE',d:'古い図書館の本からあふれたインクの怪物を、パネルをそろえて消していく。'},
  {id:'6824533269',sl:'ukiyo-strings',n:'UKIYO STRINGS',t:'RHYTHM',d:'狐面の少女と、三味線の3本の弦を弾く。和とサイバーのリズムゲーム。'},
  {id:'6824510114',sl:'fuwari-puzzle',n:'ふわりの雑学パズル',t:'PUZZLE',d:'雑学が好きな人のための、やさしい3つそろえパズル。解くたびに雑学がひとつ増える。',r:[5,3]},
  {id:'6825566599',sl:'storage-osouji',n:'ストレージおそうじ',t:'UTILITY',d:'写真と動画を整理して、iPhone の「ストレージがいっぱい」を解決。すべての機能が無料。'}
 ];
-const st=id=>'https://apps.apple.com/jp/app/id'+id;
+const st=id=>id==='6838352120'?'/games/shipcraft/':'https://apps.apple.com/jp/app/id'+id;
 const $=id=>document.getElementById(id);
 $('icons').innerHTML=G.map((g,i)=>`<a href="${st(g.id)}" target="_blank" rel="noopener" title="${g.n}" style="animation-delay:${.45+i*.07}s"><img src="img/icon_${g.id}.jpg" alt="${g.n}"></a>`).join('');
 // 流れる画面の壁（3列・同じ並びを2回で切れ目なし）
@@ -266,7 +267,7 @@ $('grid').innerHTML=G.map((g,i)=>`<div class="g rv" style="--d:${(i%3)*.08}s">
   <img class="ph a" src="img/w/${g.sl}_2.webp" alt="" loading="lazy"><img class="ph b" src="img/w/${g.sl}_1.webp" alt="" loading="lazy"><img class="ph c" src="img/w/${g.sl}_3.webp" alt="" loading="lazy"></a>
  <div class="b"><div class="top"><img src="img/icon_${g.id}.jpg" alt="" loading="lazy"><div><div class="tag">${g.t}</div><h3><a href="/games/${g.sl}/">${g.n}</a></h3></div></div>
  <p>${g.d}</p>
- <div class="bt"><a class="btn p" href="${st(g.id)}" target="_blank" rel="noopener">App Store</a><a class="btn s" href="/games/${g.sl}/">くわしく</a><a class="btn s" href="/games/${g.sl}/guide/">遊び方</a>${g.gd?`<a class="btn g2" href="https://suzuri.jp/zatugaku_Ruby" target="_blank" rel="noopener">グッズ</a>`:''}</div></div></div>`).join('');
+ <div class="bt">${g.soon?`<a class="btn o" href="/games/${g.sl}/">近日公開</a><a class="btn s" href="/games/${g.sl}/">くわしく</a>`:`<a class="btn p" href="${st(g.id)}" target="_blank" rel="noopener">App Store</a><a class="btn s" href="/games/${g.sl}/">くわしく</a><a class="btn s" href="/games/${g.sl}/guide/">遊び方</a>`}${g.gd?`<a class="btn g2" href="https://suzuri.jp/zatugaku_Ruby" target="_blank" rel="noopener">グッズ</a>`:''}</div></div></div>`).join('');
 const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
 // スクロールで出る
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -6% 0px'});
