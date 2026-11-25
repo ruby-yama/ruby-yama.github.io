@@ -185,12 +185,27 @@ footer .w{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
  .rv,.hero p.lead,.hbt,.stats,.icons a{opacity:1!important;transform:none!important}
  .hero h1 .ln>span{transform:none!important}
 }
+
+.newbar{display:block;position:relative;z-index:5;text-align:center;padding:9px 14px;font-size:13.5px;font-weight:700;color:#07090f;background:linear-gradient(90deg,#ffb347,#ff7a1a,#ffb347);background-size:200% 100%;animation:nbg 6s linear infinite}
+.newbar b{font:700 11px Inter;letter-spacing:.2em;margin-right:8px;padding:2px 7px;border-radius:999px;background:#07090f;color:#ffb347}@keyframes nbg{to{background-position:200% 0}}
+.feat{position:relative;margin:56px 0 10px;border-radius:28px;overflow:hidden;border:1px solid rgba(255,190,110,.35);background:radial-gradient(120% 120% at 85% 10%,rgba(255,140,40,.22),transparent 55%),linear-gradient(160deg,#0f2036,#0a111c 65%);box-shadow:0 30px 80px rgba(0,0,0,.45)}
+.feat .in{display:grid;grid-template-columns:1.05fr 1fr;gap:28px;align-items:center;padding:46px 44px}
+.feat .eb{display:inline-flex;align-items:center;gap:8px;font:700 12px Inter;letter-spacing:.3em;color:#ffb347}.feat .eb i{width:8px;height:8px;border-radius:50%;background:#ff7a1a;box-shadow:0 0 0 0 rgba(255,122,26,.7);animation:pls 1.6s infinite}@keyframes pls{70%{box-shadow:0 0 0 10px rgba(255,122,26,0)}100%{box-shadow:0 0 0 0 rgba(255,122,26,0)}}
+.feat .ttl{display:flex;align-items:center;gap:16px;margin:14px 0 10px}.feat .ttl img{width:84px;height:84px;border-radius:20px;box-shadow:0 8px 24px rgba(0,0,0,.5)}
+.feat h2{margin:0;font-size:clamp(28px,4.2vw,46px);line-height:1.2;letter-spacing:.02em}.feat .tg{font:500 12px Inter;letter-spacing:.22em;color:#8fb6e8;margin-top:4px}
+.feat .cp{font-size:clamp(18px,2.2vw,24px);font-weight:700;margin:4px 0 14px;background:linear-gradient(90deg,#fff,#ffd59a);-webkit-background-clip:text;background-clip:text;color:transparent}
+.feat .dv{border-left:3px solid #ff7a1a;padding:4px 0 4px 14px;color:#c9d4e3;font-size:15px;line-height:1.95;margin:0 0 22px}
+.feat .pts{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 24px}.feat .pts span{font-size:13px;padding:5px 12px;border-radius:999px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12)}
+.feat .ph{position:relative;height:520px}.feat .ph img{position:absolute;width:44%;border-radius:20px;border:2px solid rgba(255,210,140,.5);box-shadow:0 20px 50px rgba(0,0,0,.6)}
+.feat .ph .a{left:2%;top:40px;transform:rotate(-7deg)}.feat .ph .b{left:28%;top:0;z-index:2;width:46%}.feat .ph .c{right:0;top:52px;transform:rotate(7deg)}
+@media(max-width:820px){.feat .in{grid-template-columns:1fr;padding:30px 22px}.feat .ph{height:min(96vw,460px);order:-1}}
 </style>
 <meta name="google-adsense-account" content="ca-pub-1672050563696371">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1672050563696371" crossorigin="anonymous"></script>
 </head>
 <body>
 <div class="bgfx"></div><div class="grid-lines"></div><div class="bar" id="bar"></div>
+<a class="newbar" href="/games/shipcraft/"><b>NEW</b>新作「船組みハクスラ 大航海」まもなく App Store で公開 →</a>
 <header><div class="w">
   <a class="brand" href="#"><img src="img/logo.png" alt="">ruby<i>games</i></a>
   <nav><a class="nc" href="#games">GAMES</a><a href="request/">WORK</a><a class="nc" href="#contact">CONTACT</a><a class="nav-shop" href="#goods">SHOP</a></nav>
@@ -210,6 +225,20 @@ footer .w{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 </div>
 
 <div class="ticker" aria-hidden="true"><div class="tr" id="tick"></div></div>
+
+<section><div class="w">
+  <div class="feat rv"><div class="in">
+    <div class="tx">
+      <div class="eb"><i></i>NEW GAME · COMING SOON</div>
+      <div class="ttl"><img src="img/icon_6838352120.jpg" alt="船組みハクスラ 大航海"><div><h2>船組みハクスラ<br>大航海</h2><div class="tg">HACK &amp; SLASH · VOYAGE</div></div></div>
+      <div class="cp">部品を組んで、海賊を沈めて奪え。</div>
+      <p class="dv">大航海で、ハクスラがやってみたい。交易もしたいし、船も自分の手で組みたい。その全部をスマホで手軽に遊べる形にするために、構想を何度も重ねて作りました。いちばん力を入れた新作です。</p>
+      <div class="pts"><span>船のマスに部品を組む</span><span>奪った部品で強くなるハクスラ</span><span>実在の45港で交易</span><span>巨大な主との討伐戦</span><span>対人戦</span></div>
+      <div class="hbt"><a class="btn o big" href="/games/shipcraft/">くわしく見る・プレビュー動画</a></div>
+    </div>
+    <div class="ph"><img class="a" src="games/shipcraft/s2.jpg" alt="" loading="lazy"><img class="b" src="games/shipcraft/s1.jpg" alt="" loading="lazy"><img class="c" src="games/shipcraft/s4.jpg" alt="" loading="lazy"></div>
+  </div></div>
+</div></section>
 
 <section id="games"><div class="w">
   <div class="sh rv"><div><div class="num">01 / GAMES</div><h2>GAMES</h2></div><span>App Store で配信中・すべて無料</span></div>
